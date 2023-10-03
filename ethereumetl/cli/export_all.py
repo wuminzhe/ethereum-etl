@@ -120,5 +120,6 @@ def export_all(start, end, partition_batch_size, provider_uri, output_dir, max_w
                chain='ethereum'):
     """Exports all data for a range of blocks."""
     provider_uri = check_classic_provider_uri(chain, provider_uri)
+    print("provider_uri: ", provider_uri)
     export_all_common(get_partitions(start, end, partition_batch_size, provider_uri),
                       output_dir, provider_uri, max_workers, export_batch_size)
